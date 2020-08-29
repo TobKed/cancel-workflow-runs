@@ -520,7 +520,7 @@ jobs:
           jobNameRegexps: '["^Static checks$", "^Build docs$", "^Build prod image.*"]'
       - name: "Extract canceled failed runs"
         id: extract-cancelled-failed-runs
-        if: steps.cancel-failed.outputs.cancelledRuns != "[]"
+        if: steps.cancel-failed.outputs.cancelledRuns != '[]'
         run: |
             REGEXP="Fail fast CI. Source run: "
             SEPARATOR=""
